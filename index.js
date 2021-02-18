@@ -4,7 +4,8 @@ const Employee = require("./lib/Employee");
 const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
-const { exit } = require("process");
+const generateHtml = require('./src/generateHtml');
+const createCardsFunction = require('./src/createCards');
 
 const teamArray = [];
 
@@ -54,7 +55,10 @@ function addEmployee() {
         {
             when: (answers) => {
                 if(answers.nextEmployee === "Done") {
-                    process.exit();
+                    // const newHtml = generateHtml.generateTeamProfile(teamArray);
+                    // writeToFile(newHtml);
+                    const newHtml = createCardsFunction.createCards(teamArray);
+                    writeToFile(newHtml);
                 }
             }
         },
@@ -103,12 +107,19 @@ function addEmployee() {
     })
 }
 
+function writeToFile(newHtml) {
+
+    fs.writeFile("generatedTeamProfileWebsite.html", newHtml, function(err) {
+
+        if(err) return console.log(err);
+        else process.exit();
+        
+    });
+
+
+
+}
+
 addManager();
 
-// if(nextEmployee === "Engineer") {
-//     const engineer = new Engineer();
-// }
-// else {
-//     const intern = new Intern();
-// }
 
