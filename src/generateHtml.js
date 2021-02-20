@@ -12,22 +12,16 @@ function generateTeamProfile(cardsArray) {
         <title>Team Profiles</title>
     </head>
     <body>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <nav class="navbar navbar-light bg-light">
-                        <div class="container-fluid">
-                            <span class="navbar-brand mx-auto h1">Team Profile</span>
-                        </div>
-                    </nav>
-                </div>
+        <nav class="navbar mb-5 navbar-light bg-dark">
+            <div class="container-fluid">
+                <span class="navbar-brand mx-auto text-light"><h1>Team Profile</h1></span>
             </div>
-        </div>
+        </nav>
         <div class="container">
             <div class="row">
-                <div id="cards-div" class="col-md-12">
+                <div id="cards-div" class="col-md-12 card-columns d-flex justify-content-around">
                     ${Array(cardsArray.length).fill().map((item, i) => 
-                        `${cardsArray[i]}`).join()}
+                        `${cardsArray[i]}`).join('')}
                 </div>
             </div>
         </div>
