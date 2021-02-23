@@ -91,8 +91,6 @@ function addEmployee() {
         }
     ]).then( (answers) => {
 
-        console.log(answers);
-
         if(answers.nextEmployee === "Engineer") {
             const engineer = new Engineer(answers.name, answers.id, answers.email, answers.github);
             teamArray.push(engineer);
@@ -101,7 +99,6 @@ function addEmployee() {
             const intern = new Intern(answers.name, answers.id, answers.email, answers.school);
             teamArray.push(intern);
         }
-        console.log(teamArray);
         addEmployee();
 
     })
