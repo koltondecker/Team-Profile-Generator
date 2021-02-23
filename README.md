@@ -18,6 +18,11 @@ A project team needs some way to track team flow and contact information. With t
 Check out a video walkthrough of this application <a href="https://drive.google.com/file/d/1MswAFQzV8EoDAGtqjl5ZQVK31eMyj28E/view">HERE</a>
 <hr>
 
+<img src="./assets/images/Command-Line.png" width="100%">
+<hr>
+<img src="./assets/images/Generated-Webpage.png" width="100%">
+<hr>
+
 ## Installation: 
 Upon downloading the files from this repo, use 'npm init' to initialize npm package and 'npm i' to install necessary dependencies for this project.
 <hr>
